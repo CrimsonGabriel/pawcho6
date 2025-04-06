@@ -13,7 +13,9 @@ RUN go mod init myapp
 ARG VERSION=1.0.0
 ENV VERSION=${VERSION}
 
-RUN go build -o aprogram -ldflags "-X main.Version=${VERSION}"
+# Wykorzystanie sekretów z BuildKit
+RUN --mount=type=secret,id=mysecret \
+    go build -o aprogram -ldflags "-X main.Version=${VERSION}"
 
 # === Etap 2: Konfiguracja Nginx jako reverse proxy ===
 FROM nginx:alpine

@@ -1,0 +1,2 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAAV7IueSsAMaScCPC7g2j15r/x6g8JDpa3SiJOILAvE gabriel.piatek.biznes@gmail.com
+
